@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropCare AI - Crop Disease Detection</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f1f8e9;
+            color: #333;
+        }
+
+        /* Navbar */
+        header {
+            background: #2e7d32;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #c8e6c9;
+        }
+
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 40px;
+            background: linear-gradient(
+                rgba(13, 230, 24, 0.7),
+                rgba(45, 228, 8, 0.514)
+            ),
+            url("agriculture.jpg");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: #ffb300;
+            padding: 14px 30px;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ffa000;
+        }
+
+
+        /* Upload Box */
+        .upload-box {
+            background:white;
+            color:#333;
+            padding:30px;
+            border-radius:20px;
+            width:350px;
+            text-align:center;
+            box-shadow:0px 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .upload-box h2 {
+            color:#2e7d32;
+            margin-bottom:20px;
+        }
+
+        input[type=file] {
+            margin:20px;
+        }
+
+        .upload-btn {
+            background:#2e7d32;
+            color:rgb(247, 250, 246);
+            padding:12px 25px;
+            border:none;
+            border-radius:25px;
+            cursor:pointer;
+        }
+
+        .upload-btn:hover {
+            background:#2e9b37;
+        }
+
+
+        /* Features */
+        .features {
+            padding:50px;
+            text-align:center;
+        }
+
+        .features h2 {
+            color:#2e7d32;
+            font-size:32px;
+        }
+
+        .cards {
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            margin-top:30px;
+        }
+
+        .card {
+            background:white;
+            width:280px;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 5px 15px #ccc;
+        }
+
+        .card h3 {
+            color:#388d3c;
+            margin-bottom:15px;
+        }
+
+        .card p {
+            line-height:1.5;
+        }
+
+
+        /* Footer */
+        footer {
+            background:#1b5e20;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+
+        @media(max-width:900px){
+
+            .hero{
+                flex-direction:column;
+            }
+
+            .hero-text{
+                width:90%;
+                text-align:center;
+            }
+
+            .cards{
+                flex-direction:column;
+                align-items:center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🌱 CropCare 
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Detection</a>
+        <a href="#">Contact</a>
+    </nav>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            AI-Based Crop Disease Detection System
+        </h1>
+
+        <p>
+            Protect your crops with artificial intelligence.
+            Upload crop images and get instant disease detection,
+            treatment suggestions, preventive measures, and
+            smart farming recommendations.
+        </p>
+
+
+        <a href="#" class="btn">
+            Start Detection
+        </a>
+
+    </div>
+
+
+
+    <div class="upload-box">
+
+        <h2>
+            Upload Crop Image
+        </h2>
+
+        <input type="file" accept="image/*">
+
+        <br>
+
+        <button class="upload-btn">
+            Analyze Crop
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<section class="features">
+
+<h2>
+    Our Features
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+    <h3>🤖 AI Detection</h3>
+    <p>
+        Deep learning models analyze crop images
+        and identify possible diseases accurately.
+    </p>
+</div>
+
+
+
+<div class="card">
+    <h3>🌿 Smart Solutions</h3>
+    <p>
+        Provides medicines, fertilizers,
+        and preventive farming methods.
+    </p>
+</div>
+
+
+
+<div class="card">
+    <h3>📊 Crop Monitoring</h3>
+    <p>
+        Helps farmers maintain healthy crops
+        and improve productivity.
+    </p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+© 2026 CropCare AI | AI Powered Agriculture Solution
+</p>
+
+</footer>
+
+
+
+</body>
+</html>
