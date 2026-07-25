@@ -2,72 +2,73 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  const crops = [
-    { name: "Rice", season: "Kharif", status: "Growing" },
-    { name: "Wheat", season: "Rabi", status: "Ready for Harvest" },
-    { name: "Corn", season: "Summer", status: "Planted" }
+  const features = [
+    {
+      title: "🤖 AI Detection",
+      description:
+        "Deep learning models analyze crop images and identify possible diseases accurately.",
+    },
+    {
+      title: "🌿 Smart Solutions",
+      description:
+        "Provides medicines, fertilizers, and preventive farming methods.",
+    },
+    {
+      title: "📊 Crop Monitoring",
+      description:
+        "Helps farmers maintain healthy crops and improve productivity.",
+    },
   ];
 
   return (
-    <div className="app">
-      <header>
-        <h1>🌾 AI Based Crop Disease Detection System</h1>
-        <p>Technology for modern farming</p>
+    <div className="page">
+      <header className="site-header">
+        <div className="logo">🌱 CropCare</div>
+
+        <nav className="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Detection</a>
+          <a href="#">Contact</a>
+        </nav>
       </header>
 
-      <section className="cards">
-        <div className="card">
-          <h2>🌱 Crops</h2>
-          <p>Total Crops: {crops.length}</p>
+      <section className="hero">
+        <div className="hero-text">
+          <h1>AI-Based Crop Disease Detection System</h1>
+          <p>
+            Protect your crops with artificial intelligence. Upload crop images
+            and get instant disease detection, treatment suggestions,
+            preventive measures, and smart farming recommendations.
+          </p>
+          <a href="#" className="btn">
+            Start Detection
+          </a>
         </div>
 
-        <div className="card">
-          <h2>🌦 Weather</h2>
-          <p>Temperature: 28°C</p>
-          <p>Rainfall: 70%</p>
-        </div>
-
-        <div className="card">
-          <h2>💧 Irrigation</h2>
-          <p>Water Level: Normal</p>
+        <div className="upload-box">
+          <h2>Upload Crop Image</h2>
+          <input type="file" accept="image/*" />
+          <br />
+          <button className="upload-btn">Analyze Crop</button>
         </div>
       </section>
 
-      <section>
-        <h2>Crop Details</h2>
+      <section className="features">
+        <h2>Our Features</h2>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Crop</th>
-              <th>Season</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {crops.map((crop, index) => (
-              <tr key={index}>
-                <td>{crop.name}</td>
-                <td>{crop.season}</td>
-                <td>{crop.status}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="cards">
+          {features.map((feature, index) => (
+            <div className="card" key={index}>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section className="tips">
-        <h2>🌿 Farming Tips</h2>
-        <ul>
-          <li>Use organic fertilizers for healthy crops.</li>
-          <li>Monitor soil moisture regularly.</li>
-          <li>Use drip irrigation to save water.</li>
-        </ul>
-      </section>
-
-      <footer>
-        <p>© 2026 Smart Agriculture</p>
+      <footer className="site-footer">
+        <p>© 2026 CropCare AI | AI Powered Agriculture Solution</p>
       </footer>
     </div>
   );
