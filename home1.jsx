@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>🌾 Smart Agriculture Dashboard</h1>
+        <h1>🌾 AI Based Crop Disease Detection System</h1>
         <p>Technology for modern farming</p>
       </header>
 
